@@ -1,0 +1,65 @@
+.hoverBox{
+  position: absolute;
+  width: 200px;
+  top: 27px;
+  background-color: var(--secondary-color);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  z-index: 100;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.box{
+  display: flex;
+  flex-direction: column;
+  padding: 0 6px;
+}
+
+.hoverLinks{
+  font-size: 14px;
+  color: rgb(58, 58, 58);
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  padding: 10px 6px;
+}
+.hoverLinks::before,
+.hoverLinks::after {
+ content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+.hoverLinks::before {
+  background-color: #fe9f9f;
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.hoverLinks::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 10px;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: #fe9f9f;
+}
+
+.hoverLinks:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+.hoverLinks:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.hoverLinks span {
+  display: inline-block;
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.hoverLinks:hover span {
+  transform: translate3d(-200%, 0, 0);
+}

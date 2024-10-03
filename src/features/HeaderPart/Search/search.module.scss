@@ -1,0 +1,20 @@
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.searchInput{
+  border: none;
+  background-color: transparent;
+  padding: 6px 0;
+  width: 320px;
+  font-family: "Kurale", system-ui;
+}
+
+::placeholder {
+  font-family: "Kurale", system-ui;
+  color: var(--text-color);
+  opacity: 0.3; 
+}

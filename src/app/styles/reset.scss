@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Buenard:wght@400;700&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Kurale&family=Style+Script&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+textarea {
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+
+  &::placeholder {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+  }
+}
+
+button {
+  font-family: inherit;
+}
+a {
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+img{
+  max-width: 100%;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+:root{
+  --primary-color:#fed2d2;
+  --secondary-color:#f8f8f8;
+  --text-color: rgb(34, 34, 34);
+}
+.slick-prev, .slick-next {
+  color: black;  /* Set the arrow color to black */
+  font-size: 2rem;  /* Increase arrow size */
+  z-index: 1;
+  background-color: black;
+}

@@ -1,0 +1,90 @@
+.wrapper{
+  margin-top: 40px;
+}
+.wrapperInner{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+.imgBox{
+  width: 40%;
+  margin-right: 60px;
+  height: 450px;
+}
+.productImg{
+  border-radius: 30px;
+  overflow: hidden;
+
+  img{
+    transition: 0.3s ease all;
+  }
+
+  &:hover{
+    img{
+      transition: 0.3s ease all;
+      transform: scale(1.2);
+    }
+  }
+}
+.productTitle{
+  color: var(--text-color);
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+.productReview{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+.reviews{
+  margin-left: 10px;
+}
+.itemPrice{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: var(--text-color);
+}
+.boxBtn{
+  background-color: var(--primary-color) !important;
+  color: rgb(255, 70, 101) !important;
+  font-weight: 600 !important;
+  padding: 8px 20px !important;
+}
+.fabBtn{
+  background-color: var(--primary-color) !important;
+  color: rgb(255, 70, 101) !important;
+  width: 46px !important;
+  height: 46px !important;
+}
+.navBtn:hover{
+  background: none !important;
+}
+.countBox{
+  margin: 12px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: -20px;
+}
+.tabsBox{
+  margin-top: 20px;
+}
+.tabCon{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #ff485f;
+  font-weight: 600;
+  font-family: "Kurale", serif;
+}
+
+.tabIcon{
+  margin-right: 10px;
+}
+.tabPanel{
+  height: 210px;
+  overflow-y: scroll;
+  font-family: "Kurale", serif;
+}

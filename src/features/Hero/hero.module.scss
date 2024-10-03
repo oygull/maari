@@ -1,0 +1,57 @@
+
+.flexBox{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease all;
+  }
+}
+.itemBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.itemA{
+  cursor: pointer;
+  width: 350px;
+  height: 480px;
+  overflow: hidden;
+  border-radius: 30px;
+  position: relative;
+}
+.itemA:hover{
+  img{
+    transform: scale(1.1);
+    transition: 0.3s ease all;
+    -webkit-filter: blur(5px);
+  }
+}
+.itemB{
+  cursor: pointer;
+  width: 350px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 30px;
+  position: relative;
+}
+.itemB:hover{
+  img{
+    transform: scale(1.1);
+    transition: 0.3s ease all;
+    -webkit-filter: blur(5px);
+  }
+}
+.itemTitle{
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 50px;
+  color: var(--secondary-color);
+  z-index: 1;
+}

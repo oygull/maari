@@ -1,0 +1,78 @@
+@import "../assets/fonts/Inter/stylesheet.css";
+@import "reset.scss";
+
+body {
+  font-family: "Kurale", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: #f8f8f8;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.container{
+  width: 1300px;
+  padding: 0px 10px;
+  margin: 0 auto;
+}
+
+.page_content {
+  flex-grow: 1;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dbdbdb;
+  border-radius: 20px;
+  border: 1px solid #fff {
+    bottom: none;
+  }
+}
+.nextArrow{
+  padding: 10px 5px 10px 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 220px;
+  right: 10px;
+  background-color: var(--primary-color);
+  color: #ff485f;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  z-index: 50;
+}
+.prevArrow{
+  padding: 10px 5px 10px 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 220px;
+  left: 10px;
+  background-color: var(--primary-color);
+  color: #ff485f;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  z-index: 50;
+}
+
+.transition { transition: .3s cubic-bezier(.3, 0, 0, 1.3) }
+

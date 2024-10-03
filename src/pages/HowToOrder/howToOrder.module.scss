@@ -1,0 +1,74 @@
+.wrapper{
+  margin: 40px 0;
+}
+.orederTitile{
+  font-size: 32px;
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+.wrapperInner{
+  display: flex;
+  flex-direction: row;
+}
+.imgBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgBoxInner{
+  border-radius: 20px;
+  overflow: hidden;
+  width: 400px;
+
+  img{
+    transition: 0.3s ease all;
+  }
+
+  &:hover{
+    img{
+        transition: 0.3s ease all;
+        transform: scale(1.2);
+      }
+  }
+}
+.orderImg{
+  width: 900px;
+  height: 400px;
+  object-fit: contain;
+  transition: 0.3s ease all;
+}
+.listItem + .listItem{
+  margin-top: 1.5rem;
+}
+.listItem{
+  display: flex;
+	align-items: center;
+	gap: 1rem;
+	background: rgb(251, 219, 245);
+	padding: 1rem;
+	border-radius: 1rem;
+	width: calc(90% - 1rem);
+	box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
+}
+.listItem::before{
+  counter-increment: list-item;
+	content: counter(list-item);
+	font-size: 3rem;
+	font-weight: 700;
+	width: 1.5em;
+	height: 1.5em;
+	background: black;
+	flex: 0 0 auto;
+	border-radius: 50%;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.listItem:nth-child(even) {
+	flex-direction: row-reverse;
+	background:  var(--primary-color);
+	margin-right: -3rem;
+	margin-left: 3rem;
+}
