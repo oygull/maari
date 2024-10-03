@@ -9,6 +9,7 @@ import HowToOrder from "../pages/HowToOrder";
 import CategoryPage from "../pages/CategoryPage";
 import MainCategory from "../pages/MainCategory";
 import Blog from "../pages/Blog";
+import BlogInner from "../pages/BlogInner";
 
 
 function App(){
@@ -35,6 +36,7 @@ const [filteredMainCategory,setFilteredMainCategory] = useState<mainCategoryItem
      <Routes>
       <Route path="/" element={<HomePage/>}/>
       <Route path="/blog" element={<Blog/>}/>
+      <Route path="/blog/:id" element={<BlogInner/>}/>
       <Route path="/products" element={<Products/>}/>
       <Route  path="/products/:id"   element={<ItemPage />} />
       <Route  path="/eachitem/:categoryName"   element={<CategoryPage filteredCategory={filteredCategory}/>} />
