@@ -4,6 +4,7 @@ import Logo from "./Logo";
 import Menu from "./Menu";
 import styles from "./header.module.scss";
 import Search from "./Search";
+import ResponsiveMenu from "./ResponsiveMenu";
 
 function HeaderPart() {
   return (
@@ -14,6 +15,7 @@ function HeaderPart() {
           <Search />
           <NavList />
           <Menu />
+          <ResponsiveMenu/>
         </div>
       </div>
     </div>

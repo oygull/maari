@@ -514,168 +514,168 @@ const blogArr = [
         }
       ],
     },
-    {
-      blogId: 9,
-      blogTitle: '',
-      blogViews: 0,
-      blogImg: '',
-      blogSubDesc: "",
-       blogDesc: [
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        }
-      ],
-    },
-    {
-      blogId: 10,
-      blogTitle: '',
-      blogViews: 0,
-      blogImg: '',
-      blogSubDesc: "",
-       blogDesc: [
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        }
-      ],
-    },
-    {
-      blogId: 11,
-      blogTitle: '',
-      blogViews: 0,
-      blogImg: '',
-      blogSubDesc: "",
-       blogDesc: [
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        }
-      ],
-    },{
-      blogId: 12,
-      blogTitle: '',
-      blogViews: 0,
-      blogImg: '',
-      blogSubDesc: "",
-       blogDesc: [
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        },
-        {
-          subTitle:'',
-          subPar: ``
-        }
-      ],
-    }
+    // {
+    //   blogId: 9,
+    //   blogTitle: '',
+    //   blogViews: 0,
+    //   blogImg: '',
+    //   blogSubDesc: "",
+    //    blogDesc: [
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     }
+    //   ],
+    // },
+    // {
+    //   blogId: 10,
+    //   blogTitle: '',
+    //   blogViews: 0,
+    //   blogImg: '',
+    //   blogSubDesc: "",
+    //    blogDesc: [
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     }
+    //   ],
+    // },
+    // {
+    //   blogId: 11,
+    //   blogTitle: '',
+    //   blogViews: 0,
+    //   blogImg: '',
+    //   blogSubDesc: "",
+    //    blogDesc: [
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     }
+    //   ],
+    // },{
+    //   blogId: 12,
+    //   blogTitle: '',
+    //   blogViews: 0,
+    //   blogImg: '',
+    //   blogSubDesc: "",
+    //    blogDesc: [
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     },
+    //     {
+    //       subTitle:'',
+    //       subPar: ``
+    //     }
+    //   ],
+    // }
 ]
 export default blogArr;

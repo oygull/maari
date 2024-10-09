@@ -6,3 +6,8 @@
 .wrapperListItem{
   margin: 0 12px;
 }
+@media screen and (max-width:	1025px){
+  .wrapper{
+    display: none;
+  }
+}

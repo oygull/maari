@@ -1,0 +1,79 @@
+.wrapper{
+  margin-top: 40px;
+  padding: 20px 0 30px 0;
+  background-color: var(--primary-color);
+  border: 4px double var(--primary-color);
+}
+.wrapperInner{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #e991a1;
+  padding-bottom: 20px;
+}
+.logoImgLink{
+  height: 130px;
+}
+.footerColor{
+  margin-top: -30px;
+  font-size: 12px;
+}
+.logoBox{
+  width: 30%;
+}
+.socialsBox{
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+}
+.socialsLink,
+.footerSubtitle{
+  color: #e991a1;
+}
+.sectionsList{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-top: 30px;
+}
+.sctionLink{
+  color: var(--text-color);
+  font-size: 12px;
+}
+.separateBox{
+  width: 55%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 60px;
+}
+.navListBox{
+  width: 40%;
+  margin-top: 30px;
+}
+.wrapperList{
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  margin-top: 6px;
+}
+.listLink{
+  color: var(--text-color);
+  font-size: 12px;
+}
+.copyRight{
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+@media screen and (max-width:	481px){
+  .wrapperInner{
+    flex-direction: column;
+  }
+  .logoBox{
+    width: 100%;
+  }
+  .wrapper{
+    padding-top: 0;
+  }
+}

@@ -3,11 +3,9 @@
   flex-direction: row;
   list-style-type: none;
 }
-
 .navListItem{
   position:relative;
 }
-
 .listLink {
 color: #23211f;
 font-size: 15px;
@@ -48,5 +46,12 @@ transition:0.2s ease-in-out;
       0px 50% / 80px 80px repeat-x;
 }
 }
-
+@media screen and (max-width:	1025px){
+  .wrapperList{
+    display: none;
+  }
+}
+.personBtn{
+  color: var(--text-color);
+}
 

@@ -24,6 +24,35 @@
   }
 }
 
+@media screen and (max-width:	1025px){
+  .wrapperInner{
+    width: 250px;
+
+    .productImg{
+      height: 280px;
+    }
+  }
+}
+@media screen and (max-width:	869px){
+  .wrapperInner{
+    width: 200px;
+
+    .productImg{
+      height: 220px;
+    }
+  }
+}
+@media screen and (max-width:	481px){
+  .wrapperInner{
+    width: 180px;
+
+    .productImg{
+      height: 200px;
+    }
+  }
+ 
+}
+
 .reviews{
   margin-left: 6px;
   color: var(--text-color);

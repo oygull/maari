@@ -10,7 +10,7 @@ import CategoryPage from "../pages/CategoryPage";
 import MainCategory from "../pages/MainCategory";
 import Blog from "../pages/Blog";
 import BlogInner from "../pages/BlogInner";
-
+import Footer from "../features/Footer";
 
 function App(){
 
@@ -43,6 +43,7 @@ const [filteredMainCategory,setFilteredMainCategory] = useState<mainCategoryItem
       <Route  path="/:maincategoryName"   element={<MainCategory filteredMainCategory={filteredMainCategory}/>} />
       <Route path="/howtoorder" element={<HowToOrder/>}/>
     </Routes>
+    <Footer/>
     </>
   )
 } 

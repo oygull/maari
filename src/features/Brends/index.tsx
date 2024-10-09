@@ -10,7 +10,6 @@ function Brends(){
     'https://kleargloss.com/cdn/shop/collections/image.webp?v=1693336795', 
     'https://www.cosmoprof.com/media//cosmoprof/brandBible/2024/AC22C0A9-CA99-E552-4F9F7663FD23C774.png',
     'https://1000logos.net/wp-content/uploads/2023/11/Holika-Holika-Logo.png',
-    'https://beauty-garden.ba/wp-content/uploads/2022/12/beauty-of-joseon-logo.png',
     'https://www.ashayang.com/cdn/shop/collections/logo.png?v=1711389271&width=750',
     'https://www.sephora.bh/on/demandware.static/-/Library-Sites-SephoraV2/en/dw166fcb5f/Brands_Visuals/LANEIGE/LANEIGE_ALLPRODUCTPAGE_LOGO_300x150.png',
     'https://vely-prod-media-bucket.s3.amazonaws.com/uploads/2020/03/26/brand-logos-with-shadow.png',
@@ -23,11 +22,37 @@ function Brends(){
     dots: true,
     infinite: true,
     speed: 200,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 2,
     swipeToSlide: true,
     centerPadding: "60px",
     focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 4,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   return (

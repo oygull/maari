@@ -29,7 +29,7 @@
   img{
     transform: scale(1.1);
     transition: 0.3s ease all;
-    -webkit-filter: blur(5px);
+    // -webkit-filter: blur(5px);
   }
 }
 .itemB{
@@ -44,7 +44,7 @@
   img{
     transform: scale(1.1);
     transition: 0.3s ease all;
-    -webkit-filter: blur(5px);
+    // -webkit-filter: blur(5px);
   }
 }
 .itemTitle{
@@ -54,4 +54,21 @@
   font-size: 50px;
   color: var(--secondary-color);
   z-index: 1;
+}
+@media screen and (max-width:	769px){
+  .flexBox{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+  }
+  .itemB{
+    height: 180px;
+  }
+  .itemA{
+    height: 350px;
+  }
+  .itemBox{
+    row-gap: 20px;
+  }
 }
