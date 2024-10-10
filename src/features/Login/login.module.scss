@@ -1,19 +1,18 @@
 .wrapper{
-  position: absolute;
-  top: 50%;
-  right: 0%;
-  transform: translate(-30%,-50%);
   width: 500px;
-  height: 600px;
+  height: 570px;
   background-color: #fbd3d0;
   border-radius: 30px;
   border: 10px double  #f8e1e0;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   padding: 30px;
+  margin: auto;
+  margin-top: -10px;
 } 
 .formBox{
   width: 100%;
   margin-top: 20px;
+  overflow: hidden;
 }
 .loginTitle{
   color: #5f4444;
@@ -24,4 +23,59 @@
   text-align: center;
   margin-top: 6px;
   color: #5f4444;
+}
+.passwordReset{
+  display: flex;
+  margin-top: 10px;
+  color: #6e676e;
+  justify-content: end;
+}
+.loginBtn{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  column-gap: 10px;
+  background-color: var(--secondary-color);
+  padding: 10px;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  background-color: #5f4444c3;
+  border: 1px solid  #5f4444;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.signInText{
+  text-align: center;
+  margin-top: 12px;
+  color: #6e676e;
+}
+.wrapperSignin{
+  width: 500px;
+  height: 570px;
+  background-color: #fbd3d0;
+  border-radius: 30px;
+  border: 10px double  #f8e1e0;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  padding: 30px;
+  margin: 60px auto;
+}
+.formBoxSign{
+  display: flex;
+  flex-direction: column;
+}
+.formWrap{
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+.rememberMe{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  margin-top: 6px;
 }

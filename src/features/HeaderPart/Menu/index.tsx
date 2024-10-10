@@ -5,11 +5,6 @@ import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemButton from '@mui/material/ListItemButton';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
@@ -18,6 +13,8 @@ import Slide from '@mui/material/Slide';
 import { TransitionProps } from '@mui/material/transitions';
 import banner from "./banner.svg"
 import Login from "../../Login";
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
@@ -30,6 +27,8 @@ const Transition = React.forwardRef(function Transition(
 
 function NavList(){
   const [open, setOpen] = React.useState(false);
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -48,15 +47,16 @@ function NavList(){
                   <PermIdentityIcon sx={{ color: 'black' }} />
                 </Button>
                 <Dialog
-                  fullScreen
+                  fullScreen={fullScreen}
                   open={open}
                   onClose={handleClose}
+                  aria-labelledby="responsive-dialog-title"
                   TransitionComponent={Transition}
                   sx={{
                     '& .MuiDialog-paper': {
-                      backgroundImage: `url(${banner})`,
-                      backgroundSize: 'cover',  // Ensure the background covers the entire area
-                      backgroundPosition: 'center',
+                      width: '600px',
+                      height: '670px',
+                      overflow: 'hidden'
                     },
                   }}
                 >

@@ -1,43 +1,43 @@
 .wrapper{
-    display: none;
-    background-color: var(--secondary-color);
+  display: none;
+  background-color: var(--secondary-color);
 }
 @media screen and (max-width:	1025px){
-  .wrapper{
-    display: block;
-  }
+.wrapper{
+  display: block;
+}
 }
 .logoImgLink{
-  height: 130px;
-  margin-top: 6px;
+height: 130px;
+margin-top: 6px;
 }
 .dialogHeader{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between !important;
-  height: 80px;
-  overflow: hidden;
+display: flex;
+flex-direction: row;
+justify-content: space-between !important;
+height: 80px;
+overflow: hidden;
 }
 .diologBtn{
-  color: var(--text-color) !important;
-  border-color: var(--text-color) !important;
+color: var(--text-color) !important;
+border-color: var(--text-color) !important;
 }
 .dialogContentBox{
-  padding: 0 !important;
+padding: 0 !important;
 }
 .details{
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 }
 .detailsLink{
-  padding: 6px 0;
-  color: var(--text-color);
+padding: 6px 0;
+color: var(--text-color);
 }
 .dropLink{
-  color: var(--text-color);
+color: var(--text-color);
 }
 .dialogLink{
-  height: 30px !important;
-  margin: 0 16px;
-  color: var(--text-color);
+height: 30px !important;
+margin: 0 16px;
+color: var(--text-color);
 }
