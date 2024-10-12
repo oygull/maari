@@ -11,6 +11,7 @@ import MainCategory from "../pages/MainCategory";
 import Blog from "../pages/Blog";
 import BlogInner from "../pages/BlogInner";
 import Footer from "../features/Footer";
+import SearchedProducts from "../pages/SearchedProducts";
 
 function App(){
 
@@ -27,11 +28,24 @@ function App(){
     path: string;
   }
 
+  interface Product {
+    id: number;
+    productName: string;
+    productBrend: string;
+    productCategory: string;
+    productStatus: string;
+    productReviews: number;
+    productPrice: string;
+    productImages: string[];
+    productDesc: string;
+    productCompound: string;
+  };
+  const [searchedProducts, setSearchedProducts] = useState<Product[]>([]);
 const [filteredCategory,setFilteredCategory] = useState<categoryItem[]>([]);
 const [filteredMainCategory,setFilteredMainCategory] = useState<mainCategoryItem[]>([]);
   return (
     <>
-     <HeaderPart/>
+     <HeaderPart setSearchedProducts={setSearchedProducts}/>
      <Subheader setFilteredMainCategory={setFilteredMainCategory} setFilteredCategory={setFilteredCategory}/>
      <Routes>
       <Route path="/" element={<HomePage/>}/>
@@ -42,6 +56,7 @@ const [filteredMainCategory,setFilteredMainCategory] = useState<mainCategoryItem
       <Route  path="/eachitem/:categoryName"   element={<CategoryPage filteredCategory={filteredCategory}/>} />
       <Route  path="/:maincategoryName"   element={<MainCategory filteredMainCategory={filteredMainCategory}/>} />
       <Route path="/howtoorder" element={<HowToOrder/>}/>
+      <Route  path="/search/:query" element={<SearchedProducts searchedProducts={searchedProducts}/>}/>
     </Routes>
     <Footer/>
     </>

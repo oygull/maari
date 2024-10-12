@@ -14,6 +14,7 @@ function HomePage(){
           <img alt="banner" src={banner}/>
         </div>
         <Item/>
+        
     </div>
   )
 } 
