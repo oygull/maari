@@ -23,9 +23,7 @@ function HowToOrder(){
           <div className={styles.imgBoxInner} >
             <img alt="img" src="https://mylittlekorea.com/cdn/shop/files/LaneigeNeoCushion_Glow_PDP_01.jpg?v=1688366004&width=528"/>
           </div>
-          <div className={styles.imgBoxInner}>
-          <img alt="img" src="https://mylittlekorea.com/cdn/shop/files/55b33a820c426caa66336a8dd6e1512a.jpg?v=1688444586&width=1080"/>
-          </div>
+          
         </div>
         </div>
       </div>

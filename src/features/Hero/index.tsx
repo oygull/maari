@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./hero.module.scss";
-
+import ScrollReveal from "scrollreveal";
 
 function Hero(){
+  const sectionRef = useRef<HTMLDivElement | null>(null); // Reference to the section element
+
+  useEffect(() => {
+
+    const sr = ScrollReveal({
+      origin: "bottom",  // Animation origin
+      distance: "550px",  // Distance the element moves during animation
+      duration: 800,     // Duration of animation in milliseconds
+      delay: 200,        // Delay before the animation starts
+      reset: false       // Whether to reset animation every time it enters the viewport
+    });
+
+    if (sectionRef.current) {
+      sr.reveal(sectionRef.current);
+    }
+  }, []);
   return (
-    <div className="container">
+    <div  ref={sectionRef} className="container">
      <div className={styles.flexBox}>
-        <div className={styles.itemA}>
+        <div className={` ${styles.itemA}`}>
           <h2 className={styles.itemTitle}>Skincare</h2>
           <img src="https://mylittlekorea.com/cdn/shop/files/Screenshot_2023-06-20_at_9.58.26_AM.png?v=1687222714&width=797"/>
         </div>

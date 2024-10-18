@@ -1,0 +1,19 @@
+
+.loaderWrapper {
+  position: relative;
+  height: 100vh; /* Full height */
+  width: 100%; /* Full width */
+  overflow: hidden; /* Hide overflow */
+}
+
+.video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%; /* Full width */
+  min-height: 100%; /* Full height */
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  transform: translate(-50%, -50%); /* Center the video */
+  z-index: -1; /* Send behind other content */
+}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
 import HomePage from "../pages/Home"
 import HeaderPart from "../features/HeaderPart"
@@ -12,8 +12,19 @@ import Blog from "../pages/Blog";
 import BlogInner from "../pages/BlogInner";
 import Footer from "../features/Footer";
 import SearchedProducts from "../pages/SearchedProducts";
+import Loader from '../pages/Loader';
 
 function App(){
+
+  const [isLoading, setIsLoading] = useState(true); 
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false); 
+    }, 2000); 
+
+    return () => clearTimeout(timer); 
+  }, []);
 
   interface categoryItem {
     childId: number;
@@ -41,10 +52,12 @@ function App(){
     productCompound: string;
   };
   const [searchedProducts, setSearchedProducts] = useState<Product[]>([]);
-const [filteredCategory,setFilteredCategory] = useState<categoryItem[]>([]);
-const [filteredMainCategory,setFilteredMainCategory] = useState<mainCategoryItem[]>([]);
+  const [filteredCategory,setFilteredCategory] = useState<categoryItem[]>([]);
+  const [filteredMainCategory,setFilteredMainCategory] = useState<mainCategoryItem[]>([]);
   return (
     <>
+    {isLoading ? <Loader /> : 
+     <>
      <HeaderPart setSearchedProducts={setSearchedProducts}/>
      <Subheader setFilteredMainCategory={setFilteredMainCategory} setFilteredCategory={setFilteredCategory}/>
      <Routes>
@@ -60,6 +73,9 @@ const [filteredMainCategory,setFilteredMainCategory] = useState<mainCategoryItem
     </Routes>
     <Footer/>
     </>
+    } 
+  </>
+   
   )
 } 
 
