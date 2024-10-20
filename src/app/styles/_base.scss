@@ -115,5 +115,48 @@ code {
   z-index: 50;
 }
 
+.nextArrowHome{
+  padding: 10px 5px 10px 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 150px;
+  right: 10px;
+  background-color: var(--primary-color);
+  color: #ff485f;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  z-index: 50;
+}
+.prevArrowHome{
+  padding: 10px 5px 10px 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 150px;
+  left: 10px;
+  background-color: var(--primary-color);
+  color: #ff485f;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  z-index: 50;
+}
+
+.main-content {
+  padding-bottom: 100px; /* Give enough space for the footer */
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+}
+
 .transition { transition: .3s cubic-bezier(.3, 0, 0, 1.3) }
 
