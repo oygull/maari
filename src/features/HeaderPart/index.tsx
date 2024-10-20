@@ -11,6 +11,7 @@ interface Product {
   productName: string;
   productBrend: string;
   productCategory: string;
+  productSubCategory?: string; 
   productStatus: string;
   productReviews: number;
   productPrice: string;

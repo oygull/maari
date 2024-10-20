@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from 'react';
 import styles from "./item.module.scss"
 import productsArr from "../../app/assets/date/productsArr";
 import EachItem from "../EachItem";
 
 function Item(){
-  
+  const [currentPage, setCurrentPage] = useState<number>(1);
 
   return (
     <div className="container">

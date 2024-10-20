@@ -7,7 +7,7 @@ import Subheader from "../features/Subheader";
 import ItemPage from "../pages/ItemPage";
 import HowToOrder from "../pages/HowToOrder";
 import CategoryPage from "../pages/CategoryPage";
-import MainCategory from "../pages/MainCategory";
+import SubCategory from "../pages/SubCategory";
 import Blog from "../pages/Blog";
 import BlogInner from "../pages/BlogInner";
 import Footer from "../features/Footer";
@@ -26,24 +26,27 @@ function App(){
     return () => clearTimeout(timer); 
   }, []);
 
-  interface categoryItem {
+  interface subCategoryItem {
     childId: number;
     childName: string;
     childPath: string;
   }
-  interface mainCategoryItem {
+
+  interface CategoryItem {
     id: number;
     itemNamme: string;
-    itemChildren: categoryItem[];
+    itemChildren: subCategoryItem[];
     isDropdownVisible:boolean;
     path: string;
   }
+
 
   interface Product {
     id: number;
     productName: string;
     productBrend: string;
     productCategory: string;
+    productSubCategory?: string; 
     productStatus: string;
     productReviews: number;
     productPrice: string;
@@ -52,22 +55,22 @@ function App(){
     productCompound: string;
   };
   const [searchedProducts, setSearchedProducts] = useState<Product[]>([]);
-  const [filteredCategory,setFilteredCategory] = useState<categoryItem[]>([]);
-  const [filteredMainCategory,setFilteredMainCategory] = useState<mainCategoryItem[]>([]);
+  const [filteredCategory,setFilteredCategory] = useState<CategoryItem[]>([]);
+  const [filteredSubCategory,setFilteredSubCategory] = useState<subCategoryItem[]>([]);
   return (
     <>
     {isLoading ? <Loader /> : 
      <>
      <HeaderPart setSearchedProducts={setSearchedProducts}/>
-     <Subheader setFilteredMainCategory={setFilteredMainCategory} setFilteredCategory={setFilteredCategory}/>
+     <Subheader setFilteredSubCategory={setFilteredSubCategory} setFilteredCategory={setFilteredCategory}/>
      <Routes>
       <Route path="/" element={<HomePage/>}/>
       <Route path="/blog" element={<Blog/>}/>
       <Route path="/blog/:id" element={<BlogInner/>}/>
       <Route path="/products" element={<Products/>}/>
       <Route  path="/products/:id"   element={<ItemPage />} />
-      <Route  path="/eachitem/:categoryName"   element={<CategoryPage filteredCategory={filteredCategory}/>} />
-      <Route  path="/:maincategoryName"   element={<MainCategory filteredMainCategory={filteredMainCategory}/>} />
+      <Route  path="/:categoryName"   element={<CategoryPage filteredCategory={filteredCategory} />} />
+      <Route  path="/:categoryName/:subCategory"   element={<SubCategory filteredSubCategory={filteredSubCategory}/>} />
       <Route path="/howtoorder" element={<HowToOrder/>}/>
       <Route  path="/search/:query" element={<SearchedProducts searchedProducts={searchedProducts}/>}/>
     </Routes>

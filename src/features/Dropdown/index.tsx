@@ -8,14 +8,15 @@ interface Item {
 }
 
 interface DropdownProps {
+  itemPath: string;
   itemChildren: Item[];
-  setFilteredCategory: React.Dispatch<React.SetStateAction<Item[]>>;
+  setFilteredSubCategory: React.Dispatch<React.SetStateAction<Item[]>>;
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ itemChildren, setFilteredCategory }) => {
+const Dropdown: React.FC<DropdownProps> = ({ itemChildren, setFilteredSubCategory, itemPath }) => {
   
   const handleLinkClick = (item: Item) => {
-    setFilteredCategory([item]); 
+    setFilteredSubCategory([item]); 
   };
   
   return (
@@ -27,7 +28,7 @@ const Dropdown: React.FC<DropdownProps> = ({ itemChildren, setFilteredCategory }
                           onClick={() => handleLinkClick(item)}  
                           data-replace={item.childName} 
                           className={styles.hoverLinks} 
-                          to={`/eachitem/${item.childPath}`} >
+                          to={`/${itemPath}/${item.childPath}`} >
                         <span>{item.childName} </span>
                         </Link>
                       )

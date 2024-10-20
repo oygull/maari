@@ -7,25 +7,25 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 
-interface categoryItem {
+interface subCategoryItem {
   childId: number;
   childName: string;
   childPath: string;
 }
-interface mainCategoryItem {
+interface CategoryItem {
   id: number;
   itemNamme: string;
-  itemChildren: categoryItem[];
+  itemChildren: subCategoryItem[];
   isDropdownVisible:boolean;
   path: string;
 }
 
 interface CategoryPageProps {
-  setFilteredCategory: React.Dispatch<React.SetStateAction<categoryItem[]>>;  
-  setFilteredMainCategory: React.Dispatch<React.SetStateAction<mainCategoryItem[]>>; 
+  setFilteredCategory: React.Dispatch<React.SetStateAction<CategoryItem[]>>;  
+  setFilteredSubCategory: React.Dispatch<React.SetStateAction<subCategoryItem[]>>; 
 }
 
-const Subheader : React.FC<CategoryPageProps> = ({ setFilteredCategory,setFilteredMainCategory }) => {
+const Subheader : React.FC<CategoryPageProps> = ({ setFilteredCategory,setFilteredSubCategory }) => {
 
   const [visibleDropdown, setVisibleDropdown] = useState<number | null>(null);
 
@@ -37,8 +37,8 @@ const Subheader : React.FC<CategoryPageProps> = ({ setFilteredCategory,setFilter
     setVisibleDropdown(null);
   };
 
-  const handleLinkClick = (item: mainCategoryItem) => {
-    setFilteredMainCategory([item]); 
+  const handleLinkClick = (item: CategoryItem) => {
+    setFilteredCategory([item]); 
   };
 
   return (
@@ -66,7 +66,7 @@ const Subheader : React.FC<CategoryPageProps> = ({ setFilteredCategory,setFilter
                     }
                   })()}
 
-                {visibleDropdown === item.id && <Dropdown setFilteredCategory={setFilteredCategory}  itemChildren={item.itemChildren}/>}
+                {visibleDropdown === item.id && <Dropdown itemPath={item.path} setFilteredSubCategory={setFilteredSubCategory}  itemChildren={item.itemChildren}/>}
                 
                 </li>
               )

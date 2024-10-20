@@ -3,35 +3,38 @@ import styles from "./category.module.scss";
 import productsArr from "../../app/assets/date/productsArr";
 import EachItem from "../../features/EachItem";
 
-interface categoryItem {
+interface subCategoryItem {
   childId: number;
   childName: string;
   childPath: string;
 }
-
-interface CategoryPageProps {
-  filteredCategory: categoryItem[];  
+interface CategoryItem {
+  id: number;
+  itemNamme: string;
+  itemChildren: subCategoryItem[];
+  isDropdownVisible:boolean;
+  path: string;
 }
 
+interface CategoryPageProps {
+  filteredCategory: CategoryItem[];
+}
 
-const CategoryPage: React.FC<CategoryPageProps> = ({ filteredCategory })=>{
-  console.log("CategoryPage rendered", filteredCategory);
+const CategoryPage: React.FC<CategoryPageProps> = ({ filteredCategory }) =>{
   return (
     <div className={styles.wrapper}>
       {
         filteredCategory.map((el)=>{
          
-const filteredProducts = productsArr.filter(
-  (product) => {
-    console.log("Product Category:", product.productCategory);
-    console.log("Child Path:", el.childPath);
-    return product.productCategory === el.childPath;
-  }
-);
-          
+        const filteredProducts = productsArr.filter(
+          (product) => {
+            return product.productCategory === el.path;
+          }
+        );
+                  
           return(
               <div className="container">
-                  <h2 className={styles.title}>{el.childName}</h2>
+                  <h2 className={styles.title}>{el.itemNamme}</h2>
                   <div className={styles.productList}>
                   {filteredProducts.length > 0 ? (
                     filteredProducts.map((product) => (
